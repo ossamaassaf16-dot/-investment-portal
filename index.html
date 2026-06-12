@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البوابة الاستثمارية الخاصة</title>
+    
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- تحميل الخطوط الفخمة -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;750&family=Cinzel:wght@600;900&display=swap">
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #000000; }
+        .eng-title { font-family: 'Cinzel', serif; }
+        
+        /* تأثيرات الإضاءة المظلمة والغموض النبضي */
+        .occult-glow { text-shadow: 0 0 15px rgba(217, 119, 6, 0.7), 0 0 30px rgba(146, 64, 14, 0.4); }
+        .pyramid-box { filter: drop-shadow(0 0 25px rgba(217, 119, 6, 0.25)); }
+        
+        /* حركة نبض خفيفة جداً وعميقة للعين المراقبة */
+        @keyframes eyeGaze {
+            0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 5px rgba(245,158,11,0.6)); }
+            50% { opacity: 1; filter: drop-shadow(0 0 20px rgba(245,158,11,0.9)); }
+        }
+        .all-seeing-eye { animation: eyeGaze 3.5s infinite ease-in-out; }
+
+        /* حركة العملة الترددية */
+        @keyframes floatMoney {
+            0% { transform: translateY(0px) rotateY(0deg); filter: drop-shadow(0 5px 15px rgba(245,158,11,0.3)); }
+            50% { transform: translateY(-10px) rotateY(180deg); filter: drop-shadow(0 20px 30px rgba(245,158,11,0.6)); }
+            100% { transform: translateY(0px) rotateY(360deg); filter: drop-shadow(0 5px 15px rgba(245,158,11,0.3)); }
+        }
+        .moving-coin { animation: floatMoney 4s infinite ease-in-out; }
+    </style>
+</head>
+<body class="bg-black text-amber-500 min-h-screen flex flex-col justify-between p-4 md:p-6 overflow-x-hidden selection:bg-amber-600 selection:text-black">
+
+    <!-- العداد العلوي للمستخدمين النشطين -->
+    <div class="w-full flex justify-end px-4 pt-2 select-none">
+        <div class="bg-zinc-950 border border-amber-600/20 px-4 py-2 rounded-xl text-left flex items-center gap-2 backdrop-blur-md shadow-2xl">
+            <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+            <span class="text-[11px] text-zinc-500 tracking-wider font-mono">ACTIVE SESSIONS:</span>
+            <span id="active-count" class="font-mono text-xs text-amber-500 font-bold tracking-widest">66,310</span>
+        </div>
+    </div>
+
+    <!-- رأس الصفحة: الشعار الواقعي الحاد والهيبة المطلوبة -->
+    <header class="flex flex-col items-center text-center pt-2 select-none">
+        
+        <!-- تصميم الهرم الحجري الغامض مع قمة العين العائمة والمشعة بدقة -->
+        <div class="w-44 h-44 relative pyramid-box mb-4">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+                <defs>
+                    <!-- تدرجات الظلال العميقة لمحاكاة حجر المحافل القديم والذهب المظلم -->
+                    <linearGradient id="dark-gold-left" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#78350f" />
+                        <stop offset="50%" stop-color="#451a03" />
+                        <stop offset="100%" stop-color="#000000" />
+                    </linearGradient>
+                    <linearGradient id="dark-gold-right" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#d97706" />
+                        <stop offset="50%" stop-color="#92400e" />
+                        <stop offset="100%" stop-color="#1c1917" />
+                    </linearGradient>
+                    <radialGradient id="mystic-glow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ea580c" stop-opacity="0.7"/>
+                        <stop offset="40%" stop-color="#78350f" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+
+                <!-- هالة الضباب المشع خلف القمة العائمة -->
+                <circle cx="50" cy="32" r="25" fill="url(#mystic-glow)" />
+
+                <!-- قاعدة وجوانب الهرم السفلي المصمت (مقطع هندسي حاد) -->
+                <!-- الوجه الأيسر المظلم -->
+                <polygon points="50,40 15,82 50,85" fill="url(#dark-gold-left)" stroke="#451a03" stroke-width="0.5" />
+                <!-- الوجه الأيمن المضاء بالذهب النحاسي -->
+                <polygon points="50,40 50,85 85,82" fill="url(#dark-gold-right)" stroke="#78350f" stroke-width="0.5" />
+
+                <!-- خطوط البناء التكتونية المقسمة لطبقات الهرم لإعطاء واقعية أثرية -->
+                <path d="M 33,60 L 67,60 M 24,71 L 76,71 M 17,80 L 83,80" stroke="#000000" stroke-width="1.2" opacity="0.8" stroke-linecap="round" />
+                <path d="M 50,40 L 50,85" stroke="#000000" stroke-width="0.8" opacity="0.5" />
+
+                <!-- القمة المثلثية العائمة بشكل منفصل (The Floating Capstone) -->
+                <polygon points="50,14 36,34 50,36" fill="url(#dark-gold-left)" />
+                <polygon points="50,14 50,36 64,34" fill="url(#dark-gold-right)" />
+
+                <!-- العين الكونية التي ترى كل شيء داخل القمة العائمة (تفاصيل واقعية حادة) -->
+                <g class="all-seeing-eye">
+                    <!-- بياض العين وجفنها الحاد -->
+                    <path d="M 40,27 Q 50,18 60,27" stroke="#f59e0b" stroke-width="1" fill="#1c1917" />
+                    <path d="M 40,27 Q 50,36 60,27" stroke="#f59e0b" stroke-width="1" fill="#1c1917" />
+                    <!-- حدقة العين المشعة -->
+                    <circle cx="50" cy="27" r="4.5" fill="#ea580c" stroke="#fef08a" stroke-width="0.5" />
+                    <circle cx="50" cy="27" r="2" fill="#000000" />
+                    <!-- نقطة الضوء داخل البؤبؤ لإعطاء نظرة واقعية حية -->
+                    <circle cx="51.2" cy="25.8" r="0.6" fill="#ffffff" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- العبارة اللاتينية الفخمة بالخط الحاد الثقيل -->
+        <h1 class="eng-title text-xl md:text-3xl tracking-[0.35em] font-black text-amber-500 occult-glow uppercase">
+            THE SUPREME GOD
+        </h1>
+    </header>
+
+    <!-- محتوى منتصف الصفحة -->
+    <main class="flex-grow flex items-center justify-center my-6 max-w-xl mx-auto w-full px-4">
+        
+        <!-- المرحلة 1: إخلاء المسؤولية -->
+        <div id="step-disclaimer" class="w-full text-center space-y-6 transition-all duration-500">
+            <div class="bg-gradient-to-b from-zinc-950 via-stone-950 to-black border border-amber-700/20 p-6 md:p-8 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.95)]">
+                <h2 class="text-lg md:text-xl font-bold text-amber-500 mb-4 border-b border-amber-950 pb-3 tracking-widest font-sans">تنويه وإخلاء مسؤولية قانونية</h2>
+                <p class="text-zinc-400 leading-relaxed text-xs md:text-sm text-justify">
+                    إن العمليات الاستثمارية المعروضة عبر هذه البوابة تنطوي على مخاطر مالية عالية. نحن نستثمر بشكل مباشر ومكثف في **الأسهم العقارية والأصول غير المنقولة**. الأداء الرقمي السابق لا يضمن النتائج المستقبلية حتماً، والموقع وإدارته لا يتحملان أي مسؤولية مباشرة أو غير مباشرة عن تقلبات الأسواق المباغتة أو الخسائر الرأسمالية الناجمة عن قراراتك الاستثمارية الذاتية. بدخولك وتفعيلك لعملية الإيداع، فإنك تقر بكامل أهليتك القانونية وموافقتك المطلقة على هذه الشروط.
+                </p>
+            </div>
+            
+            <div class="pt-2">
+                <button onclick="goToDeposit()" class="bg-transparent border-2 border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-black px-16 py-4 rounded-full text-sm md:text-md font-bold tracking-widest transition-all duration-500 shadow-[0_0_20px_rgba(217,119,6,0.15)] active:scale-95">
+                    لبدء الاستثمار
+                </button>
+            </div>
+        </div>
+
+        <!-- المرحلة 2: واجهة الإيداع والعملة التفاعلية -->
+        <div id="step-deposit" class="w-full text-center space-y-6 hidden opacity-0 transition-all duration-500">
+            
+            <!-- أيقونة عملة الـ USDT المعدنية الفخمة ثلاثية الأبعاد -->
+            <div class="w-20 h-20 mx-auto moving-coin">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                    <circle cx="50" cy="50" r="45" fill="url(#dark-gold-right)" stroke="#d97706" stroke-width="2.5" />
+                    <circle cx="50" cy="50" r="38" fill="none" stroke="#451a03" stroke-width="1.5" stroke-dasharray="5 3" />
+                    <path d="M 32,38 L 68,38 M 50,38 L 50,70 M 38,48 L 62,48 M 42,58 L 58,58" stroke="#000000" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.8" />
+                    <path d="M 32,38 L 68,38 M 50,38 L 50,70 M 38,48 L 62,48 M 42,58 L 58,58" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" fill="none" />
+                </svg>
+            </div>
+
+            <div class="bg-gradient-to-b from-zinc-950 via-stone-950 to-black border border-amber-600/30 p-6 md:p-8 rounded-2xl shadow-2xl">
+                <h2 class="text-md md:text-lg font-bold text-zinc-300 mb-6 tracking-wide">طلب تمويل استثماري مؤمن</h2>
+                
+                <div class="grid grid-cols-2 gap-3 mb-6 text-xs md:text-sm">
+                    <div class="bg-black p-3 rounded-xl border border-zinc-900">
+                        <span class="block text-zinc-500 text-[10px] md:text-xs mb-1">المبلغ المطلوب</span>
+                        <span class="text-amber-500 font-bold text-base md:text-lg">15 USDT</span>
+                    </div>
+                    <div class="bg-black p-3 rounded-xl border border-zinc-900">
+                        <span class="block text-zinc-500 text-[10px] md:text-xs mb-1">الشبكة المستهدفة</span>
+                        <span class="text-white font-bold">TRC-20 (Tron)</span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-zinc-400 text-[11px] mb-2 text-right mr-1">عنوان المحفظة المعتمد للإيداع:</label>
+                    <div class="flex items-center bg-black p-1.5 rounded-xl border border-amber-600/20">
+                        <button onclick="copyAddress()" class="bg-amber-600 hover:bg-amber-500 active:scale-95 text-black px-4 py-2 rounded-lg font-bold text-xs md:text-sm transition">
+                            نسخ
+                        </button>
+                        <input type="text" id="wallet-address" readonly value="TQhcsJTkZyBE3f3XK1ZtwTjCGWThnV1RGA" class="bg-transparent text-center flex-grow text-[11px] md:text-sm text-amber-400 font-mono tracking-wide outline-none px-2 select-all" dir="ltr">
+                    </div>
+                    <span id="copy-toast" class="text-xs text-emerald-500 mt-2 block hidden font-bold">✓ تم نسخ العنوان بنجاح للذاكرة</span>
+                </div>
+            </div>
+
+            <div class="pt-2">
+                <button onclick="goToConfirmation()" class="w-full bg-amber-600 text-black hover:bg-amber-500 active:scale-95 py-3.5 rounded-full text-md md:text-lg font-bold shadow-lg shadow-amber-600/20 transition">
+                    تم الدفع بنجاح
+                </button>
+            </div>
+        </div>
+
+        <!-- المرحلة 3: التوجيه للبوت -->
+        <div id="step-telegram" class="w-full text-center space-y-6 hidden opacity-0 transition-all duration-500">
+            <div class="bg-gradient-to-b from-zinc-950 via-stone-950 to-black border border-amber-600/20 p-6 md:p-8 rounded-2xl shadow-xl">
+                <div class="text-3xl md:text-4xl mb-3 text-amber-600 animate-bounce">⚡</div>
+                <h2 class="text-lg md:text-xl font-bold text-zinc-200 mb-3 tracking-wide">خطوة التحقق والاعتماد الأخيرة</h2>
+                <p class="text-zinc-400 text-xs md:text-sm leading-relaxed mb-6 text-justify">
+                    يرجى النقر على الزر الذهبي أدناه للانتقال الفوري إلى نظام التحقق الآمن عبر منصة تليجرام. يتوجب عليك إرسال **صورة إيصال التحويل (Screenshot)** الواضحة لكي يتم مراجعة العملية واعتماد محفظتك الاستثمارية وبدء تدفق الأرباح.
+                </p>
+                
+                <a href="https://t.me/YourBotUsername" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-amber-600 to-yellow-700 text-black py-4 rounded-xl font-bold text-sm md:text-md hover:brightness-110 transition shadow-lg shadow-amber-600/20 active:scale-95">
+                    <span>إرسال إيصال التحويل للبوت</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- أسفل الصفحة الموحد -->
+    <footer class="w-full text-center text-[9px] tracking-[0.25em] text-amber-900/30 py-4 border-t border-zinc-950 select-none">
+        MEMBERS ONLY • PRIVATE PORTAL • © 2026
+    </footer>
+
+    <script>
+        // كود التحكم العداد المتقلب تلقائياً بشكل هيبتي واحترافي بالآلاف
+        let baseCount = 66310;
+        setInterval(() => {
+            let change = Math.floor(Math.random() * 19) - 9;
+            baseCount += change;
+            document.getElementById('active-count').innerText = baseCount.toLocaleString('en-US');
+        }, 2200);
+
+        function goToDeposit() {
+            const disc = document.getElementById('step-disclaimer');
+            const depo = document.getElementById('step-deposit');
+            disc.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                disc.classList.add('hidden');
+                depo.classList.remove('hidden');
+                setTimeout(() => { depo.classList.remove('opacity-0'); depo.classList.add('opacity-100'); }, 50);
+            }, 400);
+        }
+
+        function goToConfirmation() {
+            const depo = document.getElementById('step-deposit');
+            const tg = document.getElementById('step-telegram');
+            depo.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                depo.classList.add('hidden');
+                tg.classList.remove('hidden');
+                setTimeout(() => { tg.classList.remove('opacity-0'); tg.classList.add('opacity-100'); }, 50);
+            }, 400);
+        }
+
+        function copyAddress() {
+            const addressInput = document.getElementById('wallet-address');
+            addressInput.select();
+            addressInput.setSelectionRange(0, 99999);
+            try {
+                navigator.clipboard.writeText(addressInput.value);
+            } catch (err) {
+                const el = document.createElement('textarea');
+                el.value = addressInput.value;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+            }
+            const toast = document.getElementById('copy-toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => { toast.classList.add('hidden'); }, 3000);
+        }
+    </script>
+</body>
+</html>
